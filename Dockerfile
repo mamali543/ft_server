@@ -10,10 +10,11 @@ RUN bash nginx.sh
 RUN bash mysql.sh
 RUN bash php.sh
 RUN bash phpmyadmin.sh
+RUN bash wordpress.bash
 
 
-ENTRYPOINT [ "sh", "script.sh" ]
+CMD sh script.sh
+#ENTRYPOINT [ "sh", "script.sh" ]
 #RUN service nginx restart
 #RUN service mysql restart
-#RUN bash wordpress.sh
 #ENTRYPOINT ./srcs/startnginx.sh

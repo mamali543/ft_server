@@ -8,4 +8,8 @@ apt upgrade -y
 apt install mysql-server -y
 rm mysql-apt-config_0.8.13-1_all.deb
 service mysql start
+echo "CREATE DATABASE wordpress_db;" | mysql
+echo "CREATE USER 'ader'@'localhost' IDENTIFIED BY 'redaredaff';"| mysql
 echo "GRANT ALL PRIVILEGES ON *.* TO 'ader'@'localhost' IDENTIFIED BY 'redaredaff' WITH GRANT OPTION;" | mysql
+echo "FLUSH PRIVILEGES;" | mysql
+mysql wordpress_db < wp_db.sql

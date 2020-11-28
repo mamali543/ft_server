@@ -1,9 +1,10 @@
-
-echo "CREATE DATABASE wordpress_db;" | mysql
+#!/bin/bash
+# echo "CREATE DATABASE wordpress_db;" | mysql
 echo "GRANT ALL ON wordpress_db.* TO 'ader'@'localhost' IDENTIFIED BY 'redaredaff';" | mysql
 echo "FLUSH PRIVILEGES;" | mysql
 apt update
 apt install php php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y
+service nginx restart
 cd /var/www/html/
 curl -O https://wordpress.org/latest.tar.gz
 tar -xvf latest.tar.gz
@@ -15,6 +16,6 @@ rm /var/www/html/wordpress/wp-config-sample.php
 cd
 cd ..
 mv wp-config.php /var/www/html/wordpress/
-service mysql restart
-service nginx restart
+#service mysql restart
+#service nginx restart
 
