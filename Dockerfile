@@ -12,9 +12,5 @@ RUN bash php.sh
 RUN bash phpmyadmin.sh
 RUN bash wordpress.bash
 
-
 CMD sh script.sh
 #ENTRYPOINT [ "sh", "script.sh" ]
-#RUN service nginx restart
-#RUN service mysql restart
-#ENTRYPOINT ./srcs/startnginx.sh
