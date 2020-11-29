@@ -1,5 +1,3 @@
-#!/bin/bash
-# echo "CREATE DATABASE wordpress_db;" | mysql
 echo "GRANT ALL ON wordpress_db.* TO 'ader'@'localhost' IDENTIFIED BY 'redaredaff';" | mysql
 echo "FLUSH PRIVILEGES;" | mysql
 apt update
@@ -16,6 +14,3 @@ rm /var/www/html/wordpress/wp-config-sample.php
 cd
 cd ..
 mv wp-config.php /var/www/html/wordpress/
-#service mysql restart
-#service nginx restart
-

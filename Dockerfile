@@ -10,7 +10,8 @@ RUN bash nginx.sh
 RUN bash mysql.sh
 RUN bash php.sh
 RUN bash phpmyadmin.sh
-RUN bash wordpress.bash
+RUN bash wordpress.sh
 
-CMD sh script.sh
+CMD bash /script.sh && bash
+#CMD bash script.sh && bash
 #ENTRYPOINT [ "sh", "script.sh" ]
