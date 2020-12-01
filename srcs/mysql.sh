@@ -12,4 +12,4 @@ echo "CREATE DATABASE wordpress_db;" | mysql
 echo "CREATE USER 'ader'@'localhost' IDENTIFIED BY 'redaredaff';"| mysql
 echo "GRANT ALL PRIVILEGES ON *.* TO 'ader'@'localhost' IDENTIFIED BY 'redaredaff' WITH GRANT OPTION;" | mysql
 echo "FLUSH PRIVILEGES;" | mysql
-mysql wordpress_db < wp_db.sql
+mysql --password=redaredaff --user=ader wordpress_db < /localhost.sql
