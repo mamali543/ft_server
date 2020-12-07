@@ -13,5 +13,3 @@ RUN bash phpmyadmin.sh
 RUN bash wordpress.sh
 
 CMD bash /script.sh && bash
-#CMD bash script.sh && bash
-#ENTRYPOINT [ "sh", "script.sh" ]
